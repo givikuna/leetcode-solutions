@@ -1,6 +1,9 @@
 {
     "cSpell.words": [
-        "nums"
+        "fullwide",
+        "ittr",
+        "nums",
+        "rtype"
     ],
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
