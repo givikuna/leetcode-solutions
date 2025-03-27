@@ -1,6 +1,10 @@
 {
     "cSpell.words": [
+<<<<<<< HEAD
         "defconst",
+=======
+        "expt",
+>>>>>>> refs/remotes/origin/main
         "fullwide",
         "ittr",
         "nums",
