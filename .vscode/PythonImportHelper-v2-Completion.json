@@ -1,0 +1,151 @@
+[
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "solutions.easy.length-of-last-word.solution",
+        "description": "solutions.easy.length-of-last-word.solution",
+        "peekOfCode": "class Solution:\n    def lengthOfLastWord(self, s: str) -> int:\n        return len(s.strip().split(' ')[-1])",
+        "detail": "solutions.easy.length-of-last-word.solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "solutions.easy.longest-common-prefix.solution",
+        "description": "solutions.easy.longest-common-prefix.solution",
+        "peekOfCode": "class Solution:\n    def longestCommonPrefix(self, strs: List[str]) -> str:\n        s = ''\n        minimum_length = min(list(map(len, strs)))\n        for i in range(0, minimum_length):\n            if len(list(filter(lambda x: x != strs[0][i], list(map(lambda x: x[i], strs))))) == 0:\n                s += strs[0][i]\n            else:\n                break\n        return s",
+        "detail": "solutions.easy.longest-common-prefix.solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "solutions.easy.palindrome-number.solution",
+        "description": "solutions.easy.palindrome-number.solution",
+        "peekOfCode": "class Solution:\n    def isPalindrome(self, x: int) -> bool:\n        return str(x) == str(x)[::-1]",
+        "detail": "solutions.easy.palindrome-number.solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "solutions.easy.plus-one.solution",
+        "description": "solutions.easy.plus-one.solution",
+        "peekOfCode": "class Solution:\n    def plusOne(self, digits: List[int]) -> List[int]:\n        return list(map(int, list(str(int(''.join(list(map(str, digits)))) + 1))))",
+        "detail": "solutions.easy.plus-one.solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "solutions.hard.median-of-two-sorted-arrays.solution",
+        "description": "solutions.hard.median-of-two-sorted-arrays.solution",
+        "peekOfCode": "class Solution(object):\n    def findMedianSortedArrays(self, nums1, nums2):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :rtype: float\n        \"\"\"\n        nums = sorted(nums1 + nums2)\n        mid = len(nums) / 2\n        if len(nums) % 2 == 0:",
+        "detail": "solutions.hard.median-of-two-sorted-arrays.solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "solutions.medium.jump-game-ii.solution",
+        "description": "solutions.medium.jump-game-ii.solution",
+        "peekOfCode": "class Solution:\n    def jump(self, nums: List[int]) -> int:\n        possible={len(nums)-1}\n        seen = set()\n        ittr=0\n        while 0 not in possible:\n            ittr+=1\n            for k in set(possible):\n                if k in seen:\n                    continue",
+        "detail": "solutions.medium.jump-game-ii.solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "solutions.medium.longest-palindromic-string.solution",
+        "description": "solutions.medium.longest-palindromic-string.solution",
+        "peekOfCode": "class Solution(object):\n    def longestPalindrome(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        if s == s[::-1]: return s\n        possibilities = []\n        cl = len(s) - 1 #current\n        count = 0",
+        "detail": "solutions.medium.longest-palindromic-string.solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "solutions.medium.longest-substring-without-repeating-characters.solution",
+        "description": "solutions.medium.longest-substring-without-repeating-characters.solution",
+        "peekOfCode": "class Solution(object):\n    def lengthOfLongestSubstring(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        current= \"\"\n        prev = \"\"\n        i = 0\n        for i in range(len(s)):",
+        "detail": "solutions.medium.longest-substring-without-repeating-characters.solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "solutions.medium.reverse-integer.solution",
+        "description": "solutions.medium.reverse-integer.solution",
+        "peekOfCode": "class Solution(object):\n    def reverse(self, x):\n        \"\"\"\n        :type x: int\n        :rtype: int\n        \"\"\"\n        if x == 0: return 0\n        n = int(re.sub(r'0+$', '', str(x))[::-1].replace(\"-\", \"\"))\n        n = -n if x < 0 else n\n        if n > (2**31) - 1 or n < (-2)**31: return 0",
+        "detail": "solutions.medium.reverse-integer.solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "solutions.medium.string-to-integer.solution",
+        "description": "solutions.medium.string-to-integer.solution",
+        "peekOfCode": "class Solution:\n    def myAtoi(self, s: str) -> int:\n        if not s or len(s) == 0 or len(s.strip()) == 0: return 0\n        sign = -1 if s.strip()[0] == \"-\" else 1\n        n = 0\n        s = s.strip()\n        for i in range(0, len(s)):\n            if s[i] in list(\"1234567890\"): n = (n * 10) + int(s[i])\n            elif (s[i] in list(\"+-\")) and i == 0: continue\n            else: break",
+        "detail": "solutions.medium.string-to-integer.solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "solutions.medium.zigzag-conversion.solution",
+        "description": "solutions.medium.zigzag-conversion.solution",
+        "peekOfCode": "class Solution:\n    def convert(self, s: str, numRows: int) -> str:\n        if numRows == 1 or numRows >= len(s): return s\n        arr: List[str] = [\"\" for row in range(numRows)]\n        i: int = 0\n        starter: int = numRows\n        for c in s:\n            if starter == numRows:\n                arr[i] += c\n                i += 1",
+        "detail": "solutions.medium.zigzag-conversion.solution",
+        "documentation": {}
+    }
+]
